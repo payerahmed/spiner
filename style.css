@@ -120,3 +120,92 @@ body{
   75% {transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
   100% {transform: rotate(-360deg) }
 }
+
+.point {
+  width: 40px;
+  height: 40px;
+  margin: 100px;
+  background-color: white;
+  border-radius: 100%;  
+  animation: anivew 1.5s infinite ease-in-out;
+}
+
+@keyframes anivew {
+  0% {
+    transform: scale(0)
+   }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+.spaner5{
+  height: 40px;
+  width: 40px;
+  position: relative;
+  margin: 100px;
+  animation: dot 2s infinite ease-in-out;
+}
+.dot1, .dot2{
+  height: 60%;
+  width: 60%;
+  top: 0;
+  border-radius: 100%;
+  position: absolute;
+  background-color: #fff;
+  animation: bounc 2s infinite ease-in-out;
+}
+.dot2{
+  top: auto;
+  bottom: 0;
+  animation-delay: 1s
+}
+@keyframes dot{
+  100%{
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes bounc{
+  0%, 100%{
+    transform: scale(0.0)
+
+  }
+  50%{
+    transform: scale(1.0)
+  }
+  
+}
+.spaner6{
+  display: flex;
+  margin: 100px ;
+  width: 90px;
+  text-align: center;
+}
+.spaner6 > div {
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 100%;
+  animation: go 1.5s infinite ease-in-out both;
+}
+
+.spaner6 .go1 {
+  animation-delay: -0.48s;
+}
+
+.spaner6 .go2 {
+  animation-delay: -0.32s;
+}
+.spaner6 .go3 {
+  animation-delay: -0.16s;
+}
+
+@keyframes go {
+  0%, 80%, 100% {
+    transform: scale(0)
+   }
+  40% {
+    transform: scale(1.0)
+   }
+}
